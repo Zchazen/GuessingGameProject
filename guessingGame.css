@@ -1,0 +1,40 @@
+
+header {
+	background-size: cover;
+	background-color: navy;
+	text-align: center;
+	color: white;
+	border-radius: 10px;
+	border-color: white;
+}
+
+body {
+	background-color: navy;
+}
+form {
+	border-radius: 10px;
+	color: navy;
+	background-color: white;
+	text-align: center;
+}
+
+input {
+	text-align: center;
+	border-radius: 2px;
+	margin: 2px auto;
+	color: navy;
+	background-color: white;
+	border-color: navy;
+	padding:10px;
+}
+
+input[type=text]{
+	width: 250px;
+	height: 100px;
+	font-size: 50px;
+}
+
+p {
+	font-size: 30px;
+	padding: 10px;
+}
