@@ -61,6 +61,16 @@ function hotter_colder(currentGuess) {
 
 }
 
+function higher_lower(guess) {
+	debugger;
+	if (guess > number) {
+		$(".highorlow").text("Guess lower.");
+	}
+	else {
+		$(".highorlow").text("Guess higher.");
+	}
+}
+
 newGame();
 
 $('#guessBtn').on('click', function(){
@@ -78,11 +88,14 @@ $('#guessBtn').on('click', function(){
 			$(".prevguesses").text(" ");
 			$(".hotorcold").text(" ");
 			$(".numguesses").text(" ");
+			$(".highorlow").text(" ");
+			$(".previousguesses").text(" ");
 			$(".computerresponse").text("Congratulations, you guessed correctly! You won!");
 			$("body").css({"background-color": "green", "color": "yellow"});
 		}
 		else if (Math.abs(currentGuess-number) < 10) {
 			$(".computerresponse").text("You are hot!");
+				higher_lower(currentGuess);
 				if (guesses.length >= 2) {
 				hotter_colder();
 			}
@@ -92,17 +105,21 @@ $('#guessBtn').on('click', function(){
 		}
 		else if (Math.abs(currentGuess-number) > 10) {
 			$(".computerresponse").text("You are cold!");
+				higher_lower(currentGuess);
  				if (guesses.length >= 2) {
 				hotter_colder();
-				}
+			}
 				else {
 				return;
-				}
+			}
+				
  		}
 	}
 	else {
 		$(".prevguesses").text(" ");
 		$(".hotorcold").text(" ");
+		$(".highorlow").text(" ");
+		$(".previousguesses").text(" ");
 		$(".numguesses").text("Sorry, you have used up all of your guesses. Game over.");
 		$(".computerresponse").text("The answer is " + number + ". Click Play Again to start a new game.");
 	}
