@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title> Zoe's Guessing Game </title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="guessingGame.js"></script> 
 		<link rel="stylesheet" href="guessingGame.css">
 	</head>
 	<body> 
@@ -11,16 +13,24 @@
 			<h2> Guess the Number </h2>
 		</header>
 		<section> 
-		<form>
-			<input type="text" value="Guess"> <br>
-			<input type="button" value="Submit Your Guess"> 
-			<input type="button" value="Give me a Hint"> <br>	
-			<input type="button" value ="Play Again"> 
-			<p> You have # guesses remaining </p>
-		</form>
+			<div class="display">
+				<input type="text" class="guesses" value="Guess"> <br>
+				<input type="button" value="Submit Your Guess" id="guessBtn"> 
+				<input type="button" class="hint" value="Give me a Hint"> <br>	
+				<input type="button" id="newGm" value ="Play Again"> 
+			</div>
 		</section>
-		<footer>
-			<!--copyright information-->
-		</footer> 
+		<section>
+			<h3 class="previousguesses"> Previous Guesses </h3>
+			<div class="prevguesses"> 
+			</div>
+			<div class="numguesses"> 
+			</div> 
+			<div class="computerresponse">	
+			</div>
+			<div class="hotorcold">
+			</div>
+		</section>
+		
 	</body>
 </html>

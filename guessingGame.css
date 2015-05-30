@@ -11,7 +11,7 @@ header {
 body {
 	background-color: navy;
 }
-form {
+.display {
 	border-radius: 10px;
 	color: navy;
 	background-color: white;
@@ -37,4 +37,21 @@ input[type=text]{
 p {
 	font-size: 30px;
 	padding: 10px;
+}
+
+.previousguesses {
+	text-align: center;
+	color: white;
+	font-size: 50px;
+}
+.prevguesses, .computerresponse, .hotorcold {
+	text-align: center;
+	color: white;
+	font-size: 30px;
+}
+
+.numguesses {
+	text-align: center;
+	color: white;
+	font-size: 25px;
 }
